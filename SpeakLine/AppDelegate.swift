@@ -21,7 +21,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         self.mainWindowController = mainWindowController
         
-        
     }
 
 }
