@@ -11,17 +11,18 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    @IBOutlet weak var window: NSWindow!
-
-
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+    var mainWindowController: MainWindowController?
+    
+    func applicationDidFinishLaunching(notification: NSNotification) {
+        
+        let mainWindowController = MainWindowController()
+        
+        mainWindowController.showWindow(self)
+        
+        self.mainWindowController = mainWindowController
+        
+        
     }
-
-    func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
-    }
-
 
 }
 
